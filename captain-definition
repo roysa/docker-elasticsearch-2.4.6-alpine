@@ -56,7 +56,7 @@
     "\telse \\",
     "\t\telasticsearch -v; \\",
     "\tfi",
-    "COPY config ./src//config",
+    "COPY config ./src/config",
     "VOLUME /usr/share/elasticsearch/data",
     "COPY docker-entrypoint.sh /",
     "EXPOSE 9200 9300",
