@@ -57,7 +57,7 @@
     "\t\telasticsearch -v; \\",
     "\tfi",
     "COPY ./src/config ./config",
-    "VOLUME /es2/data",
+    "VOLUME /usr/share/elasticsearch/data",
     "COPY ./src/docker-entrypoint.sh /",
     "EXPOSE 9200 9300",
     "ENTRYPOINT [\"/docker-entrypoint.sh\"]",
