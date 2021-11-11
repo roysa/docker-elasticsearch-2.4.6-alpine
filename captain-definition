@@ -29,7 +29,7 @@
     "\tif [ \"$ELASTICSEARCH_TARBALL_ASC\" ]; then \\",
     "\t\twget -O elasticsearch.tar.gz.asc \"$ELASTICSEARCH_TARBALL_ASC\"; \\",
     "\t\texport GNUPGHOME=\"$(mktemp -d)\"; \\",
-    "\t\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$GPG_KEY\"; \\",
+    "\t\tgpg --keyserver keyserver.ubuntu.com --recv-keys \"$GPG_KEY\"; \\",
     "\t\tgpg --batch --verify elasticsearch.tar.gz.asc elasticsearch.tar.gz; \\",
     "\t\trm -rf \"$GNUPGHOME\" elasticsearch.tar.gz.asc; \\",
     "\tfi; \\",
